@@ -10,7 +10,7 @@ const App = () => {
     <Router>
       <Header />
       <LayoutGrid>
-        <Route path="/about/" component={About} />
+        <Route path="/About/" component={About} />
         <Route path="/playground/" component={Playground} />
         <Route path="/unsplash-search/" component={UnsplashSearch} />
         <Route path="/" exact component={HomePage} />
