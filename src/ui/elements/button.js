@@ -8,16 +8,16 @@ export const ZeroButton = styled.button`
 export const Button = styled.button`
   padding: 1rem;
   font-size: 1.2rem;
-  border: 1px solid #446669;
+  background: #3a7bd5;
   border-radius: 4px;
   cursor: pointer;
   outline: none;
+  color: white;
   transition: box-shadow 120ms;
   user-select: none;
 
   &:hover {
-    background: #3a7bd5;
-    color: white;
+    background: darkblue;
   }
 
   ${({ small }) =>
