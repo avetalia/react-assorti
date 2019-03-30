@@ -18,8 +18,4 @@ const HeaderBox = styled.header`
   z-index: 999;
   box-sizing: border-box;
   box-shadow: 0 10px 20px rgba(36, 37, 38, 0.08);
-
-  & > div > * + * {
-    margin-left: 2rem;
-  }
 `;
