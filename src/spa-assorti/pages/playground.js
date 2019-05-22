@@ -19,6 +19,7 @@ export const Playground = () => {
       <Button>sss</Button>
       <br /> Double counter:
       <DoubleCounter />
+      <br />
     </div>
   );
 };
