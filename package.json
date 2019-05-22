@@ -17,6 +17,7 @@
     "react-spring": "^8.0.18",
     "redux": "^4.0.1",
     "redux-saga": "^1.0.2",
+    "semantic-ui-css": "^2.4.1",
     "styled-components": "^4.2.0",
     "use-onclickoutside": "^0.3.1"
   },

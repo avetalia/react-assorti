@@ -8,11 +8,11 @@ export const ZeroButton = styled.button`
 export const Button = styled.button`
   padding: 1rem;
   font-size: 1.2rem;
-  background: #3a7bd5;
+  background: ${({ theme }) => theme.primary.main};
   border-radius: 4px;
   cursor: pointer;
   outline: none;
-  color: white;
+  color: black;
   transition: box-shadow 120ms;
   user-select: none;
 

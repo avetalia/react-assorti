@@ -2,21 +2,36 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import styled from "styled-components";
 
-import { HomePage, About, Playground, UnsplashSearch } from "./pages";
+import { ToggleThemeProvider } from "@ui/themes/theme";
+import { GlobalStyles } from "@ui/themes/global-styles";
+
+import {
+  HomePage,
+  About,
+  Playground,
+  UnsplashSearch,
+  CommentsPage
+} from "./pages";
 import { Header, Footer } from "./templates";
 
 const App = () => {
   return (
     <Router>
-      <Header />
-      <LayoutGrid>
-        <Route path="/About/" component={About} />
-        <Route path="/playground/" component={Playground} />
-        <Route path="/unsplash-search/" component={UnsplashSearch} />
-        <Route path="/" exact component={HomePage} />
-      </LayoutGrid>
+      <ToggleThemeProvider>
+        <>
+          <GlobalStyles />
+          <Header />
+          <LayoutGrid>
+            <Route path="/About/" component={About} />
+            <Route path="/playground/" component={Playground} />
+            <Route path="/unsplash-search/" component={UnsplashSearch} />
+            <Route path="/comments/" component={CommentsPage} />
+            <Route path="/" exact component={HomePage} />
+          </LayoutGrid>
 
-      <Footer />
+          <Footer />
+        </>
+      </ToggleThemeProvider>
     </Router>
   );
 };

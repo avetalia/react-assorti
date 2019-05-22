@@ -4,7 +4,7 @@ export const WinterSummer = () => {
   const [lat, setLat] = useState(null);
   const [errMessage, setErr] = useState("No errors");
   const [season, setSeason] = useState("Ekvator");
-  const [month, setMonth] = useState("Januar");
+  let month = new Date().getMonth();
 
   window.navigator.geolocation.getCurrentPosition(
     position => {
@@ -14,16 +14,12 @@ export const WinterSummer = () => {
   );
 
   useEffect(() => {
-    setMonth(new Date().getMonth());
-    setSeason((lat, month) => {
-      if (month > 2 && month < 9) {
-        return lat > 0 ? setSeason("summer") : setSeason("winter");
-      } else {
-        console.log("Februar");
-        return lat > 0 ? setSeason("winter") : setSeason("summer");
-      }
-    });
-  }, []);
+    if (month > 2 && month < 9) {
+      return lat > 0 ? setSeason("hot") : setSeason("cold");
+    } else {
+      return lat > 0 ? setSeason("cold") : setSeason("hot");
+    }
+  }, [lat]);
 
   if (!lat && errMessage) {
     return <div>Error happens: {errMessage}</div>;

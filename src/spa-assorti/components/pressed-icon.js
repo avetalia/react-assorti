@@ -6,8 +6,8 @@ import { Icon, ZeroButton } from "@ui/elements";
 
 export const PressedIcon = ({ like }) => {
   const [isPressed, setPressed] = useState(false);
-  const primary = "teal"; //theme.primary
-  const secondary = "red"; ////theme.secondary
+  //const primary = ; //theme.primary
+  //const secondary = "red"; ////theme.secondary
 
   const toggle = () => {
     setPressed(is => !is);
@@ -19,7 +19,7 @@ export const PressedIcon = ({ like }) => {
       <Icon
         iconName={ICONS.TWITTER}
         size={80}
-        color={isPressed ? primary : secondary}
+        color={isPressed ? ({ theme }) => theme.primary.main : "green"}
       />
     </ZeroButton>
   );
