@@ -8,6 +8,10 @@ import { Palindrome } from "@features/algorythms/palindrome";
 import { DoubleCounter } from "@features/examples/double-counter";
 
 export const Playground = () => {
+  const data = {
+    title: "some random2 title",
+    text: "Description of the modal window"
+  };
   return (
     <div>
       Playground <TestIcons />
@@ -21,7 +25,7 @@ export const Playground = () => {
       <br /> Double counter:
       <DoubleCounter />
       <br />
-      modal button <ModalButton />
+      modal button <ModalButton data={data} />
     </div>
   );
 };

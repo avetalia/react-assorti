@@ -6,40 +6,32 @@ import { Icon, Box, Button, Text, Modal } from "@ui/elements";
 import { ICONS } from "@ui/ICONS";
 //Dynamic Component Names with JSX for Content in Modals
 
-export const ModalContent = ({ children, title, onClose, onDeleteClick }) => {
+export const ModalContent = ({ data, onClose, onDeleteClick }) => {
+  console.log(data);
   return (
     <Box popup>
       <GridPopUp>
-        {title && (
-          <CellPopUpHeading>
-            <h3>{title}</h3>
-          </CellPopUpHeading>
-        )}
+        <Cell gridArea="popupHeading">
+          <h3>{data.title}</h3>
+        </Cell>
 
-        <CellPopUpClose>
-          <RightC
-            basis="25%"
-            justify="flex-end"
-            align-items="center"
-            gap="1.4em"
-            align="center"
-          >
+        <Cell gridArea="popupClose">
+          <RightS>
             <Button small onClick={onClose}>
               <Icon iconName={ICONS.X} color="grey" />
             </Button>
-          </RightC>
-        </CellPopUpClose>
-
-        <CellPopUpContent>
-          <Text>{children}</Text>
-        </CellPopUpContent>
-        <CellPopUpButtonYes>
+          </RightS>
+        </Cell>
+        <Cell gridArea="popupContent">
+          <Text>{data.text}</Text>
+        </Cell>
+        <Cell gridArea="popupButtonYes">
           <Button onClick={onDeleteClick}>Yes, delete</Button>
-        </CellPopUpButtonYes>
+        </Cell>
 
-        <CellPopUpButtonNo>
+        <Cell gridArea="popupButtonNo">
           <Button onClick={onClose}>No, please cancel</Button>
-        </CellPopUpButtonNo>
+        </Cell>
       </GridPopUp>
     </Box>
   );
@@ -47,7 +39,6 @@ export const ModalContent = ({ children, title, onClose, onDeleteClick }) => {
 
 ModalContent.propTypes = {
   title: PropTypes.string,
-  children: PropTypes.node.isRequired,
   onClose: PropTypes.func.isRequired,
   onDeleteClick: PropTypes.func
 };
@@ -56,6 +47,45 @@ ModalContent.defaultProps = {
   title: "undefined",
   onDeleteClick: () => {}
 };
+
+export const ModalButton = ({ data }) => {
+  const [opened, setOpened] = useState(false);
+  const close = () => setOpened(() => false);
+  const toggle = () => setOpened(isOpen => !isOpen);
+  console.log(data);
+
+  return (
+    <div>
+      <ZeroButton onClick={toggle}>
+        <Icon iconName={ICONS.TRASH} color="red" size={44} />
+      </ZeroButton>
+
+      {opened && (
+        <Modal onClose={close}>
+          <ModalContent data={data} onClose={close} />
+        </Modal>
+      )}
+    </div>
+  );
+};
+
+ModalButton.propTypes = {
+  data: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
+  })
+};
+
+const ZeroButton = styled.button`
+  background-color: transparent;
+  border: none;
+`;
+
+const RightS = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding: 1 rem;
+`;
 
 const GridPopUp = styled.div`
   display: grid;
@@ -67,53 +97,6 @@ const GridPopUp = styled.div`
   grid-template-columns: 50% 50%;
   grid-gap: 8px;
 `;
-const CellPopUpHeading = styled.div`
-  grid-area: popupHeading;
+const Cell = styled.div`
+  grid-area: ${({ gridArea }) => gridArea};
 `;
-const CellPopUpClose = styled.div`
-  grid-area: popupClose;
-`;
-const CellPopUpContent = styled.div`
-  grid-area: popupContent;
-`;
-const CellPopUpButtonYes = styled.div`
-  grid-area: popupButtonYes;
-`;
-const CellPopUpButtonNo = styled.div`
-  grid-area: popupButtonNo;
-`;
-
-export const ModalButton = () => {
-  const [opened, setOpened] = useState(false);
-  const close = () => setOpened(() => false);
-  const toggle = () => setOpened(isOpen => !isOpen);
-
-  return (
-    <div>
-      <ZeroButton onClick={toggle}>
-        <Icon iconName={ICONS.TRASH} color="red" size="20px" />
-      </ZeroButton>
-
-      {opened && (
-        <Modal onClose={close}>
-          <ModalContent title="Title some" onClose={close} />
-        </Modal>
-      )}
-    </div>
-  );
-};
-
-const ZeroButton = styled.button`
-  background-color: transparent;
-  border: none;
-`;
-
-const RightC = styled.div`
-  display: flex;
-  align: center;
-  align-items: center;
-  justify: flex-end;
-  padding: 1.2 rem;
-`;
-
-//background: ${({ props }) => props.gridArea};
