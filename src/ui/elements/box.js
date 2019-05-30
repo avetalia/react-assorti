@@ -20,4 +20,13 @@ export const Box = styled.div`
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     //transform: scale(1.001);
   }
+
+  ${({ popup }) =>
+    popup &&
+    css`
+      width: 300px;
+      position: fixed;
+      z-index: 99;
+      background: ${({ theme }) => theme.background};
+    `}
 `;
