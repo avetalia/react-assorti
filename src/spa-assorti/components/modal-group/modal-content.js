@@ -1,44 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import PropTypes from "prop-types";
-import { Icon, Box, Button, Text, Modal } from "@ui/elements";
+import { Icon, Box, Button, Text } from "@ui/elements";
 import { ICONS } from "@ui/ICONS";
-//Dynamic Component Names with JSX for Content in Modals
 
-export const ModalButton = ({ data }) => {
-  const [opened, setOpened] = useState(false);
-  const close = () => setOpened(() => false);
-  const toggle = () => setOpened(isOpen => !isOpen);
+export const ContentSwitcherModal = ({ data, tag, close }) => {
+  const contentComponents = {
+    trash: ModalContentTrash,
+    update: ModalContentUpdate,
+    standart: ModalContent
+  };
+
+  //Dynamic Component Names
+  const TagName = contentComponents[tag || "standart"];
 
   return (
     <div>
-      <ZeroButton onClick={toggle}>
-        <Icon iconName={ICONS.TRASH} color="red" size={44} />
-      </ZeroButton>
-
-      {opened && (
-        <Modal onClose={close}>
-          <ContentSwitcherModal data={data} onClose={close} tag="standart" />
-        </Modal>
+      <TagName data={data} onClose={close} />
       )}
     </div>
   );
 };
 
-ModalButton.propTypes = {
-  data: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
-  })
-};
-
-const ZeroButton = styled.button`
-  background-color: transparent;
-  border: none;
-`;
-
-export const ModalContent = ({ data, onClose, onDeleteClick }) => {
+const ModalContent = ({ data, onClose, onDeleteClick }) => {
   return (
     <Box popup>
       <GridPopUp>
@@ -101,24 +86,7 @@ const Cell = styled.div`
 
 //---------
 
-export const ContentSwitcherModal = ({ data, tag, close }) => {
-  const contentComponents = {
-    trash: ModalContentTrash,
-    update: ModalContentUpdate,
-    standart: ModalContent
-  };
-
-  const TagName = contentComponents[tag || "standart"];
-
-  return (
-    <div>
-      <TagName data={data} onClose={close} />
-      )}
-    </div>
-  );
-};
-
-export const ModalContentUpdate = ({ data, onClose }) => {
+const ModalContentUpdate = ({ data, onClose }) => {
   return (
     <Box popup>
       <h2>{data.title}</h2>
@@ -133,7 +101,7 @@ export const ModalContentUpdate = ({ data, onClose }) => {
   );
 };
 
-export const ModalContentTrash = ({ data, onClose }) => {
+const ModalContentTrash = ({ data, onClose }) => {
   return (
     <Box popup>
       <GridPopUp>

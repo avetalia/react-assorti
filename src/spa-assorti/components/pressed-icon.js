@@ -1,13 +1,12 @@
 import React, { useState } from "react";
+import { withTheme } from "styled-components";
 import PropTypes from "prop-types";
 
 import { ICONS } from "@ui/ICONS";
 import { Icon, ZeroButton } from "@ui/elements";
 
-export const PressedIcon = ({ like }) => {
+const PressedIcon = ({ theme, like }) => {
   const [isPressed, setPressed] = useState(false);
-  //const primary = ; //theme.primary
-  //const secondary = "red"; ////theme.secondary
 
   const toggle = () => {
     setPressed(is => !is);
@@ -19,7 +18,7 @@ export const PressedIcon = ({ like }) => {
       <Icon
         iconName={ICONS.TWITTER}
         size={80}
-        color={isPressed ? ({ theme }) => theme.primary.main : "green"}
+        color={isPressed ? theme.primary.main : theme.secondary.main}
       />
     </ZeroButton>
   );
@@ -32,3 +31,5 @@ PressedIcon.propTypes = {
 PressedIcon.defaultProps = {
   like: () => {}
 };
+
+export default withTheme(PressedIcon);

@@ -1,8 +1,8 @@
 import React from "react";
 import { ICONS } from "@ui/ICONS";
 import { Icon, Box, Button } from "@ui/elements";
-import { PressedIcon } from "../components/pressed-icon";
-import { ModalButton } from "../components/modal-button";
+import PressedIcon from "../components/pressed-icon";
+import { ModalButton } from "../components/modal-group/modal-button";
 import { WinterSummer } from "@features/winter-summer/winter-summer";
 import { Palindrome } from "@features/algorythms/palindrome";
 import { DoubleCounter } from "@features/examples/double-counter";
@@ -25,16 +25,24 @@ export const Playground = () => {
       <br /> Double counter:
       <DoubleCounter />
       <br />
-      modal button <ModalButton data={data} />
+      modal button
+      <ModalButton data={data} tag="update">
+        <Icon iconName={ICONS.TRASH} color="red" size={44} />
+      </ModalButton>
     </div>
   );
 };
 
-export const TestIcons = () => (
-  <>
-    <PressedIcon />
-    <PressedIcon />
-    <Icon iconName={ICONS.FACEBOOK} color="red" />
-    <Icon iconName={ICONS.TWITTER} />
-  </>
-);
+export const TestIcons = () => {
+  const like = () => {
+    console.log("hey! you like me, sweet");
+  };
+  return (
+    <>
+      <PressedIcon like={like} />
+      <PressedIcon like={like} />
+      <Icon iconName={ICONS.FACEBOOK} color="red" />
+      <Icon iconName={ICONS.TWITTER} />
+    </>
+  );
+};
