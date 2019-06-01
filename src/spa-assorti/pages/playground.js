@@ -6,6 +6,8 @@ import { ModalButton } from "../components/modal-group/modal-button";
 import { WinterSummer } from "@features/winter-summer/winter-summer";
 import { Palindrome } from "@features/algorythms/palindrome";
 import { DoubleCounter } from "@features/examples/double-counter";
+import { SmallFilter } from "@features/examples/small-filter";
+import { ZeroButton } from "../../ui/elements";
 
 export const Playground = () => {
   const data = {
@@ -18,6 +20,9 @@ export const Playground = () => {
       <Box>
         <WinterSummer />
       </Box>
+      <hr />
+      <SmallFilter />
+      <hr />
       <Palindrome text="deleveled" />
       <Palindrome text="leveled" />
       <Palindrome text="level" />
@@ -27,7 +32,7 @@ export const Playground = () => {
       <br />
       modal button
       <ModalButton data={data} tag="update">
-        <Icon iconName={ICONS.TRASH} color="red" size={44} />
+        <Icon iconName={ICONS.TRASH} color="red" />
       </ModalButton>
     </div>
   );
@@ -43,6 +48,9 @@ export const TestIcons = () => {
       <PressedIcon like={like} />
       <Icon iconName={ICONS.FACEBOOK} color="red" />
       <Icon iconName={ICONS.TWITTER} />
+      <ZeroButton>
+        <Icon iconName={ICONS.TWITTER} />
+      </ZeroButton>
     </>
   );
 };

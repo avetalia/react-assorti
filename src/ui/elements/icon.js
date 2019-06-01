@@ -12,18 +12,25 @@ export const Icon = props => {
   return (
     <StyledSVG
       color={color}
-      width={`${props.size}px`}
-      height={`${props.size}px`}
+      width={`${props.size}rem`}
+      height={`${props.size}rem`}
       viewBox="0 0 1024 1024"
     >
-      <path d={props.iconName} />
+      <path id="#icon" d={props.iconName} />
+
+      <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024">
+        <use href="#icon" />
+      </svg>
     </StyledSVG>
   );
 };
+//preserveAspectRatio does not make difference here
 
 const StyledSVG = styled.svg`
   display: inline-block;
   vertical-align: middle;
+  width: 2rem;
+  height: 2rem;
   fill: ${props => props.color};
   &:hover {
     opacity: 0.5;
@@ -40,3 +47,6 @@ Icon.propTypes = {
 Icon.defaultProps = {
   size: 16
 };
+
+//https://stackoverflow.com/questions/10028345/calculating-viewbox-parameters-based-on-path-elements-in-svg
+//dynamic viewBox size

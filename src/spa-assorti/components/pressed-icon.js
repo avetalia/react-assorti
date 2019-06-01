@@ -17,7 +17,6 @@ const PressedIcon = ({ theme, like }) => {
     <ZeroButton onClick={toggle}>
       <Icon
         iconName={ICONS.TWITTER}
-        size={80}
         color={isPressed ? theme.primary.main : theme.secondary.main}
       />
     </ZeroButton>
