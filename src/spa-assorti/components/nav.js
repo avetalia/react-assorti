@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Link } from "../../ui/elements";
+import { ToggleThemeButton } from "@ui/themes/theme";
 
 export const Nav = () => {
   return (
@@ -14,6 +15,8 @@ export const Nav = () => {
         <NavLink to="/unsplash-search">Unsplash Search</NavLink>
 
         <NavLink to="/about">About</NavLink>
+        <NavLink to="/comments">Comments </NavLink>
+        <ToggleThemeButton />
       </nav>
     </div>
   );

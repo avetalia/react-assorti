@@ -13,7 +13,8 @@ export const Header = () => {
 
 const HeaderBox = styled.header`
   display: flex;
-  height: 3rem;
+  padding: 1rem 0;
+  height: 3em;
   justify-content: center;
   align-items: center;
   z-index: 999;
