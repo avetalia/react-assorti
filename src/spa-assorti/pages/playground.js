@@ -31,7 +31,7 @@ export const Playground = () => {
       <DoubleCounter />
       <br />
       modal button
-      <ModalButton data={data} tag="update">
+      <ModalButton data={data} tag="trash">
         <Icon iconName={ICONS.TRASH} color="red" />
       </ModalButton>
     </div>

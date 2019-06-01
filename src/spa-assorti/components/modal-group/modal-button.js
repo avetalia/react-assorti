@@ -36,5 +36,5 @@ ModalButton.propTypes = {
 
 const ZeroButton = styled.button`
   background-color: transparent;
-  border: 1px solid pink;
+  border: none;
 `;

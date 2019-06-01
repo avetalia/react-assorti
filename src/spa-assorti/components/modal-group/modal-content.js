@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import PropTypes from "prop-types";
 import { Icon, Box, Button, Text } from "@ui/elements";
@@ -82,6 +82,12 @@ const GridPopUp = styled.div`
 `;
 const Cell = styled.div`
   grid-area: ${({ gridArea }) => gridArea};
+
+  ${({ gridArea }) =>
+    gridArea === "popupHeading" &&
+    css`
+      color: red;
+    `}
 `;
 
 //---------
