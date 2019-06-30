@@ -10,7 +10,8 @@ import {
   About,
   Playground,
   UnsplashSearch,
-  CommentsPage
+  CommentsPage,
+  MrForms
 } from "./pages";
 import { Header, Footer } from "./templates";
 
@@ -26,6 +27,7 @@ const App = () => {
             <Route path="/playground/" component={Playground} />
             <Route path="/unsplash-search/" component={UnsplashSearch} />
             <Route path="/comments/" component={CommentsPage} />
+            <Route path="/forms/" component={MrForms} />
             <Route path="/" exact component={HomePage} />
           </LayoutGrid>
 

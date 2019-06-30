@@ -15,7 +15,7 @@ export const ModalButton = ({ data, tag, children }) => {
   console.log(opened);
 
   return (
-    <div>
+    <>
       <ZeroButton onClick={toggle}>{children}</ZeroButton>
 
       {opened && (
@@ -23,7 +23,7 @@ export const ModalButton = ({ data, tag, children }) => {
           <ContentSwitcherModal data={data} onClose={close} tag={tag} />
         </Modal>
       )}
-    </div>
+    </>
   );
 };
 

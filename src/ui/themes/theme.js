@@ -1,5 +1,4 @@
-import React, { createContext } from "react";
-import { useContext, useEffect, useReducer, useState } from "react";
+import React, { createContext, useContext,  useState } from "react";
 import PropTypes from "prop-types";
 import { ThemeProvider } from "styled-components";
 import { light } from "@ui/themes/light";

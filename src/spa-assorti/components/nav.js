@@ -16,6 +16,7 @@ export const Nav = () => {
 
         <NavLink to="/about">About</NavLink>
         <NavLink to="/comments">Comments </NavLink>
+        <NavLink to="/exo">Exo </NavLink>
         <ToggleThemeButton />
       </nav>
     </div>
