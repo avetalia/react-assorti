@@ -981,14 +981,6 @@
   resolved "https://registry.yarnpkg.com/@redux-saga/types/-/types-1.0.2.tgz#1d94f02800b094753f9271c206a26c2a06ca14ee"
   integrity sha512-8/qcMh15507AnXJ3lBeuhsdFwnWQqnp68EpUuHlYPixJ5vjVmls7/Jq48cnUlrZI8Jd9U1jkhfCl0gaT5KMgVw==
 
-"@semantic-ui-react/event-stack@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@semantic-ui-react/event-stack/-/event-stack-3.1.0.tgz#aadbe4a28b0dd7703c5f451640d0fefe66dd9208"
-  integrity sha512-WHtU9wutZByZtFZxzj4BVEk+rvWldZpZhRcyv6d84+XLSolm83zLHYJLTACGuSl6Xa/xpgVXquvm9GyMudkJYg==
-  dependencies:
-    exenv "^1.2.2"
-    prop-types "^15.6.2"
-
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-4.2.0.tgz#dadcb6218503532d6884b210e7f3c502caaa44b1"
@@ -1094,10 +1086,20 @@
     "@svgr/plugin-svgo" "^4.0.3"
     loader-utils "^1.1.0"
 
+"@types/invariant@^2.2.29":
+  version "2.2.30"
+  resolved "https://registry.yarnpkg.com/@types/invariant/-/invariant-2.2.30.tgz#20efa342807606ada5483731a8137cb1561e5fe9"
+  integrity sha512-98fB+yo7imSD2F7PF7GIpELNgtLNgo5wjivu0W5V4jx+KVVJxo6p/qN4zdzSTBWy4/sN3pPyXwnhRSD28QX+ag==
+
 "@types/node@*":
   version "12.0.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.2.tgz#3452a24edf9fea138b48fad4a0a028a683da1e40"
   integrity sha512-5tabW/i+9mhrfEOUcLDu2xBPsHJ+X5Orqy9FKpale3SjDA17j5AEpYq5vfy3oAeAHGcvANRCO3NV3d2D6q3NiA==
+
+"@types/node@^10.0.5":
+  version "10.17.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.2.tgz#41b5afbcde1a5a805302a4da3cf399499f1bbf64"
+  integrity sha512-sAh60KDol+MpwOr1RTK0+HgBEYejKsxdpmrOS1Wts5bI03dLzq8F7T0sRXDKeaEK8iWDlGfdzxrzg6vx/c5pNA==
 
 "@types/q@^1.5.1":
   version "1.5.2"
@@ -2424,11 +2426,6 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.6:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
-  integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
-
 clean-css@4.2.x:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.2.1.tgz#2d411ef76b8569b6d0c84068dabe85b0aa5e5c17"
@@ -2777,14 +2774,6 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     ripemd160 "^2.0.0"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
-
-create-react-context@<=0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.2.2.tgz#9836542f9aaa22868cd7d4a6f82667df38019dca"
-  integrity sha512-KkpaLARMhsTsgp0d2NA/R94F/eDLbhXERdIq3LvX2biCAXcDvHYoOqHfWCHf1+OLj+HKBotLG3KqaOOf+C1C+A==
-  dependencies:
-    fbjs "^0.8.0"
-    gud "^1.0.0"
 
 create-react-context@^0.2.2:
   version "0.2.3"
@@ -3661,14 +3650,16 @@ eslint-scope@^4.0.0:
     estraverse "^4.1.1"
 
 eslint-utils@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/eslint-utils/-/eslint-utils-1.3.1.tgz#9a851ba89ee7c460346f97cf8939c7298827e512"
-  integrity sha512-Z7YjnIldX+2XMcjr7ZkgEsOj/bREONV60qYeB/bjMAqqqZ4zxKyWX+BOUkdmRmA9riiIPVvo5x86m5elviOk0Q==
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/eslint-utils/-/eslint-utils-1.4.3.tgz#74fec7c54d0776b6f67e0251040b5806564e981f"
+  integrity sha512-fbBN5W2xdY45KulGXmLHZ3c3FHfVYmKg0IrAKGOkT/464PQsx2UeIzfz1RmEci+KLm1bBaAzZAh8+/E+XAeZ8Q==
+  dependencies:
+    eslint-visitor-keys "^1.1.0"
 
-eslint-visitor-keys@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
-  integrity sha512-qzm/XxIbxm/FHyH341ZrbnMUpe+5Bocte9xkmFMzPMjRaZMcXww+MpBptFvtU+79L362nqiLhekCxCxDPaUMBQ==
+eslint-visitor-keys@^1.0.0, eslint-visitor-keys@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.1.0.tgz#e2a82cea84ff246ad6fb57f9bde5b46621459ec2"
+  integrity sha512-8y9YjtM1JBJU/A9Kc+SbaOV4y29sSWckBwMHa+FGtVj5gN/sbnKDf6xJUl+8g7FAij9LVaP8C24DUiH/f/2Z9A==
 
 eslint@5.12.0:
   version "5.12.0"
@@ -3831,11 +3822,6 @@ execa@^1.0.0:
     p-finally "^1.0.0"
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
-
-exenv@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.2.tgz#2ae78e85d9894158670b03d47bec1f03bd91bb9d"
-  integrity sha1-KueOhdmJQVhnCwPUe+wfA72Ru50=
 
 exit@^0.1.2:
   version "0.1.2"
@@ -5856,6 +5842,11 @@ joi@^11.1.1:
     isemail "3.x.x"
     topo "2.x.x"
 
+jquery@x.*:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
+  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
+
 js-levenshtein@^1.1.3:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/js-levenshtein/-/js-levenshtein-1.1.6.tgz#c6cee58eb3550372df8deb85fad5ce66ce01d59d"
@@ -6015,11 +6006,6 @@ jsx-ast-utils@^2.0.1:
   integrity sha512-yDGDG2DS4JcqhA6blsuYbtsT09xL8AoLuUR2Gb5exrw7UEM19sBcOTq+YBBhrNbl0PUC4R4LnFu+dHg2HKeVvA==
   dependencies:
     array-includes "^3.0.3"
-
-keyboard-key@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/keyboard-key/-/keyboard-key-1.0.4.tgz#52d8fa07b7e17757072aa22a67fb4ae85e4c46b0"
-  integrity sha512-my04dE6BCwPpwoe4KYKfPxWiwgDYQOHrVmtzn1CfzmoEsGG/ef4oZGaXCzi1+iFhG7CN5JkOuxmei5OABY8/ag==
 
 killable@^1.0.0:
   version "1.0.1"
@@ -7359,6 +7345,32 @@ pnp-webpack-plugin@1.2.1:
   dependencies:
     ts-pnp "^1.0.0"
 
+popmotion-pose@^3.4.0:
+  version "3.4.8"
+  resolved "https://registry.yarnpkg.com/popmotion-pose/-/popmotion-pose-3.4.8.tgz#a50d7d2e91014405402f23400b08994fd148b5ce"
+  integrity sha512-/dkEhDiTYkbLb15dkrU3Okh58KU5I8z3f18V7kciN/cJmSc8ZD8tWgOc8U9yJf3lUHnf/va5PMCX4/4RnVeUiQ==
+  dependencies:
+    "@popmotion/easing" "^1.0.1"
+    hey-listen "^1.0.5"
+    popmotion "^8.6.2"
+    pose-core "^2.1.0"
+    style-value-types "^3.0.6"
+    ts-essentials "^1.0.3"
+    tslib "^1.9.1"
+
+popmotion@^8.6.2:
+  version "8.7.0"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.7.0.tgz#83e03a14dc1f24e73b9488c6d9d7b14e5ac0947d"
+  integrity sha512-RnJMbWN+TEBT0tgG+3WS0O1i9LAq+senXSAcKw+srGviT1c9G+iKUXrp24D2w6Og0mDd61rEfKz3pFrFCdKn5Q==
+  dependencies:
+    "@popmotion/easing" "^1.0.1"
+    "@popmotion/popcorn" "^0.4.0"
+    framesync "^4.0.0"
+    hey-listen "^1.0.5"
+    style-value-types "^3.1.4"
+    stylefire "^4.1.3"
+    tslib "^1.9.1"
+
 popmotion@^8.6.4:
   version "8.6.10"
   resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.6.10.tgz#1133105f234fb617285bd254e473276153279219"
@@ -7372,11 +7384,6 @@ popmotion@^8.6.4:
     stylefire "^4.1.3"
     tslib "^1.9.1"
 
-popper.js@^1.14.4:
-  version "1.15.0"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.15.0.tgz#5560b99bbad7647e9faa475c6b8056621f5a4ff2"
-  integrity sha512-w010cY1oCUmI+9KwwlWki+r5jxKfTFDVoadl7MSrIujHU5MJ5OR6HTDj6Xo8aoR/QsA56x8jKjA59qGH4ELtrA==
-
 portfinder@^1.0.9:
   version "1.0.20"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.20.tgz#bea68632e54b2e13ab7b0c4775e9b41bf270e44a"
@@ -7385,6 +7392,16 @@ portfinder@^1.0.9:
     async "^1.5.2"
     debug "^2.2.0"
     mkdirp "0.5.x"
+
+pose-core@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/pose-core/-/pose-core-2.1.0.tgz#653c85a9a06f924611b909b4a2180ce102bbb258"
+  integrity sha512-36mVAnIgbM6jfyRug8EqqFbazHUAk9dxwVRpX61FlVw3amI/j7AFegtVU56N0Dht2aYDJIhgYPUYraT1CzjHDw==
+  dependencies:
+    "@types/invariant" "^2.2.29"
+    "@types/node" "^10.0.5"
+    hey-listen "^1.0.5"
+    tslib "^1.9.1"
 
 posix-character-classes@^0.1.0:
   version "0.1.1"
@@ -8097,7 +8114,7 @@ prompts@^0.1.9:
     kleur "^2.0.1"
     sisteransi "^0.1.1"
 
-prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -8352,17 +8369,15 @@ react-kawaii@^0.11.0:
   dependencies:
     prop-types "^15.6.2"
 
-react-popper@^1.3.3:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/react-popper/-/react-popper-1.3.3.tgz#2c6cef7515a991256b4f0536cd4bdcb58a7b6af6"
-  integrity sha512-ynMZBPkXONPc5K4P5yFWgZx5JGAUIP3pGGLNs58cfAPgK67olx7fmLp+AdpZ0+GoQ+ieFDa/z4cdV6u7sioH6w==
+react-pose@^4.0.8:
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/react-pose/-/react-pose-4.0.9.tgz#e65025b2df1759101790adaba2ec68361556ae6d"
+  integrity sha512-NCAgAIzH8MkNYhW+M6Dnps88lOo8nr08SoKbB7PfZH9ztbql9jRzlJxH9A5x3zLxahya6nsyxjCsi5+qLZV7ng==
   dependencies:
-    "@babel/runtime" "^7.1.2"
-    create-react-context "<=0.2.2"
-    popper.js "^1.14.4"
-    prop-types "^15.6.1"
-    typed-styles "^0.0.7"
-    warning "^4.0.2"
+    "@emotion/is-prop-valid" "^0.7.3"
+    hey-listen "^1.0.5"
+    popmotion-pose "^3.4.0"
+    tslib "^1.9.1"
 
 react-redux@^6.0.1:
   version "6.0.1"
@@ -8986,20 +9001,12 @@ selfsigned@^1.9.1:
   dependencies:
     node-forge "0.7.5"
 
-semantic-ui-react@^0.87.1:
-  version "0.87.1"
-  resolved "https://registry.yarnpkg.com/semantic-ui-react/-/semantic-ui-react-0.87.1.tgz#249cca258fe05ee0a7095d8be0b3a749f34a1837"
-  integrity sha512-eHSuYEJWYz9EEiM4r0b/Q2t/RPvQC/xMU5ucrsdk1TZHqEzLkyMzSBdVnXhhqHwUaHA2kt9NRxDaRUmLlGx4wg==
+semantic-ui-css@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/semantic-ui-css/-/semantic-ui-css-2.4.1.tgz#f5aea39fafb787cbd905ec724272a3f9cba9004a"
+  integrity sha512-Pkp0p9oWOxlH0kODx7qFpIRYpK1T4WJOO4lNnpNPOoWKCrYsfHqYSKgk5fHfQtnWnsAKy7nLJMW02bgDWWFZFg==
   dependencies:
-    "@babel/runtime" "^7.1.2"
-    "@semantic-ui-react/event-stack" "^3.1.0"
-    classnames "^2.2.6"
-    keyboard-key "^1.0.4"
-    lodash "^4.17.11"
-    prop-types "^15.6.2"
-    react-is "^16.7.0"
-    react-popper "^1.3.3"
-    shallowequal "^1.1.0"
+    jquery x.*
 
 "semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0:
   version "5.7.0"
@@ -9124,11 +9131,6 @@ shallow-clone@^1.0.0:
     is-extendable "^0.1.1"
     kind-of "^5.0.0"
     mixin-object "^2.0.1"
-
-shallowequal@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
-  integrity sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==
 
 shebang-command@^1.2.0:
   version "1.2.0"
@@ -9560,6 +9562,13 @@ style-loader@0.23.1:
     loader-utils "^1.1.0"
     schema-utils "^1.0.0"
 
+style-value-types@^3.0.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.1.6.tgz#6b1da918214d92c74dc7fc2d074013f372b47d76"
+  integrity sha512-AxcfUr/06AHyyyxkNB1O8ypvwa8/qK+sxwelxEN5x+jxW+RXutRE2TuHEQbFq9OBY7ym83CPKvVIsGd6lvKb0Q==
+  dependencies:
+    hey-listen "^1.0.8"
+
 style-value-types@^3.1.4:
   version "3.1.4"
   resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.1.4.tgz#8c0959d26405eb0cbad40097b496220d41c22169"
@@ -9898,6 +9907,11 @@ tryer@^1.0.0:
   resolved "https://registry.yarnpkg.com/tryer/-/tryer-1.0.1.tgz#f2c85406800b9b0f74c9f7465b81eaad241252f8"
   integrity sha512-c3zayb8/kWWpycWYg87P71E1S1ZL6b6IJxfb5fvsUgsf0S2MVGaDhDXXjDMpdCpfWXqptc+4mXwmiy1ypXqRAA==
 
+ts-essentials@^1.0.3:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/ts-essentials/-/ts-essentials-1.0.4.tgz#ce3b5dade5f5d97cf69889c11bf7d2da8555b15a"
+  integrity sha512-q3N1xS4vZpRouhYHDPwO0bDW3EZ6SK9CrrDHxi/D6BPReSjpVgWIOpLS2o0gSBZm+7q/wyKp6RVM1AeeW7uyfQ==
+
 ts-pnp@^1.0.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/ts-pnp/-/ts-pnp-1.1.2.tgz#be8e4bfce5d00f0f58e0666a82260c34a57af552"
@@ -9939,11 +9953,6 @@ type-is@~1.6.17, type-is@~1.6.18:
   dependencies:
     media-typer "0.3.0"
     mime-types "~2.1.24"
-
-typed-styles@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/typed-styles/-/typed-styles-0.0.7.tgz#93392a008794c4595119ff62dde6809dbc40a3d9"
-  integrity sha512-pzP0PWoZUhsECYjABgCGQlRGL1n7tOHsgwYv3oIiEpJwGhFTuty/YNeduxQYzXXa3Ge5BdT6sHYIQYpl4uJ+5Q==
 
 typedarray@^0.0.6:
   version "0.0.6"
@@ -10291,13 +10300,6 @@ walker@~1.0.5:
   integrity sha1-L3+bj9ENZ3JisYqITijRlhjgKPs=
   dependencies:
     makeerror "1.0.x"
-
-warning@^4.0.2:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/warning/-/warning-4.0.3.tgz#16e9e077eb8a86d6af7d64aa1e05fd85b4678ca3"
-  integrity sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==
-  dependencies:
-    loose-envify "^1.0.0"
 
 watch@~0.18.0:
   version "0.18.0"
